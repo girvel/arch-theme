@@ -8,7 +8,7 @@ chpwd() {
     branch=`git rev-parse --abbrev-ref HEAD 2>/dev/null`
     relpath="%B%F{blue}$relpath%F{yellow}[$branch]%f%b"
   else
-    relpath=$PWD
+    relpath="%~"
   fi
 
   export PROMPT="
