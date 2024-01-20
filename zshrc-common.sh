@@ -4,9 +4,11 @@
 if [ -n "$WSL_DISTRO_NAME" ]; then
     alias g="git.exe"
     alias c='cargo.exe'
+    alias cdw="cd /mnt/d/workshop"
 else
     alias g="git"
     alias c="cargo"
+    alias cdw='cd $HOME/workshop'
 fi
 
 # BASE #
