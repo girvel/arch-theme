@@ -4,17 +4,16 @@
 if [ -n "$WSL_DISTRO_NAME" ]; then
     alias g="git.exe"
     alias c='cargo.exe'
-    alias cdw="cd /mnt/d/workshop"
-    alias cdp="cd /mnt/d/playground"
 else
     alias g="git"
     alias c="cargo"
-    alias cdw='cd $HOME/workshop'
-    alias cdp='cd $HOME/playground'
 fi
 
 # BASE #
+alias cdw='cd $WORKSHOP'
+
 alias A='sudo aptitude'
+alias a='aptitude'
 alias e='$EDITOR'
 alias E='sudo $EDITOR'
 alias l='ls -lAh --group-directories-first'
