@@ -10,7 +10,9 @@ else
 fi
 
 # BASE #
-alias cdw='cd $WORKSHOP'
+cdw () {
+    cd $WORKSHOP/$1
+}
 
 alias A='sudo aptitude'
 alias a='aptitude'
