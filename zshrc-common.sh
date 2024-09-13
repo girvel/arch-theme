@@ -18,7 +18,7 @@ alias A='sudo aptitude'
 alias a='aptitude'
 alias e='$EDITOR'
 alias E='sudo $EDITOR'
-alias l='ls -lAh --group-directories-first'
+alias l='eza -lAh --group-directories-first'
 alias td='todoist'
 
 # EDITOR #
