@@ -31,9 +31,13 @@ function ebin() {
 }
 
 # GIT #
-alias gac='g add `g rev-parse --show-toplevel` && git commit'
+alias ga='g add `g rev-parse --show-toplevel`'
+alias gac='ga && git commit'
 alias gacp='gac && g push'
 alias gsync='gac -m "#" && g push'
+function gacpm() {
+    ga && git commit -m "$1" && g push
+}
 
 alias gst='g status'
 alias gd='g diff'
