@@ -20,6 +20,7 @@ alias e='$EDITOR'
 alias E='sudo $EDITOR'
 alias l='eza -lAh --group-directories-first'
 alias td='todoist'
+alias lp='looper'
 
 # EDITOR #
 git config --global core.editor "$EDITOR"
