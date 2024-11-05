@@ -21,6 +21,13 @@ alias E='sudo $EDITOR'
 alias l='eza -lAh --group-directories-first'
 alias td='todoist'
 alias lp='looper'
+alias lpe='e $(looper path schedule)'
+function lps() {
+    old_path=$(pwd)
+    cd; cd dotfiles_private
+    gsync
+    cd $old_path
+}
 
 # EDITOR #
 git config --global core.editor "$EDITOR"
