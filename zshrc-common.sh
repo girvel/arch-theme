@@ -19,15 +19,8 @@ alias a='aptitude'
 alias e='$EDITOR'
 alias E='sudo $EDITOR'
 alias l='eza -lAh --group-directories-first'
+alias lm='eza -lAr -s modified'
 alias td='todoist'
-alias lp='looper'
-alias lpe='e $(looper path schedule)'
-function lps() {
-    old_path=$(pwd)
-    cd; cd dotfiles_private
-    gsync
-    cd $old_path
-}
 
 # EDITOR #
 git config --global core.editor "$EDITOR"
@@ -50,3 +43,13 @@ function gacpm() {
 alias gst='g status'
 alias gd='g diff'
 alias glog='g log --oneline --graph'
+
+# LOOPER #
+alias lp='looper'
+alias lpe='e $(looper path schedule)'
+function lps() {
+    old_path=$(pwd)
+    cd; cd dotfiles_private
+    gsync
+    cd $old_path
+}
