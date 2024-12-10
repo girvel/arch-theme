@@ -53,3 +53,6 @@ function lps() {
     gsync
     cd $old_path
 }
+
+# C #
+alias cbuild="cd build && cmake .. && make && cd .."
