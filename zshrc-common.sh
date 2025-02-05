@@ -20,7 +20,17 @@ alias e='$EDITOR'
 alias E='sudo $EDITOR'
 alias l='eza -lAh --group-directories-first'
 alias lm='eza -lAr -s modified'
-alias td='todoist'
+function ldoc() {
+    lua $WORKSHOP/ldoc/ldoc.lua $*
+}
+function td() {
+    local quoted_args="$(printf '"%s" ' "$@")"
+    quoted_args="${quoted_args% }"
+    gh issue create --body "" --title "$quoted_args"
+}
+alias tdl="gh issue list"
+alias love='love.exe .'
+alias z="zig.exe"
 
 # EDITOR #
 git config --global core.editor "$EDITOR"
@@ -46,13 +56,13 @@ alias glog='g log --oneline --graph'
 
 # LOOPER #
 alias lp='looper'
-alias lpe='e $(looper path schedule)'
 function lps() {
     old_path=$(pwd)
     cd; cd dotfiles_private
     gsync
     cd $old_path
 }
+alias lpe='e $(looper path schedule); lps'
 
 # C #
 alias cbuild="cd build && cmake .. && make && cd .."
