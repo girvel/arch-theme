@@ -19,9 +19,8 @@ alias a='aptitude'
 alias e='$EDITOR'
 alias E='sudo $EDITOR'
 alias l='eza -lAh --group-directories-first'
-alias lm='eza -lAr -s modified'
-function ldoc() {
-    lua $WORKSHOP/ldoc/ldoc.lua $*
+function lm() {
+    eza -lAr -s=modified --color=always "$@" | head -n 20
 }
 function td() {
     local quoted_args="$(printf '"%s" ' "$@")"
