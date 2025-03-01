@@ -22,12 +22,6 @@ alias l='eza -lAh --group-directories-first'
 function lm() {
     eza -lAr -s=modified --color=always "$@" | head -n 20
 }
-function td() {
-    local quoted_args="$(printf '"%s" ' "$@")"
-    quoted_args="${quoted_args% }"
-    gh issue create --body "" --title "$quoted_args"
-}
-alias tdl="gh issue list"
 alias love='love.exe .'
 alias z="zig.exe"
 
@@ -52,6 +46,11 @@ function gacpm() {
 alias gst='g status'
 alias gd='g diff'
 alias glog='g log --oneline --graph'
+
+# GITHUB #
+alias td='gh issue create --body "" --title'
+alias tdl="gh issue list"
+alias tdd="gh issue close"
 
 # LOOPER #
 alias lp='looper'
