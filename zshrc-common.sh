@@ -52,6 +52,10 @@ alias td='gh issue create --body "" --title'
 alias tdl="gh issue list"
 alias tdd="gh issue close"
 
+# DOCKER #
+alias d='docker'
+alias dc='docker compose'
+
 # LOOPER #
 alias lp='looper'
 function lps() {
